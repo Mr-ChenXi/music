@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .box{
+        margin: 200px auto;
+        width: 100px;
+        height: 100px;
+        position: relative;
+        transform-style: preserve-3d;
+        perspective: 10000px;
+        transform: rotateX(20deg) rotateY(20deg);
+        animation: rotate 3s linear infinite;
+    }
+    .box div{
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        text-align: center;
+        line-height: 100px;
+        transition: all 1s;
+    }
+    .top{
+        background-color: rgba(161,11,2,0.8);
+        transform: rotateX(90deg) translateZ(50px);
+    }
+    .box img{
+        width: 100%;
+    }
+    .bottom{
+         background-color: rgba(48, 161, 38, 0.8);
+        transform: rotateX(-90deg) translateZ(50px);
+    }
+    .fount{
+      background-color: rgba(80, 124, 161, 0.8);
+        transform: translateZ(50px);
+    }
+    .back{
+        background-color: rgba(161, 112, 39, 0.8);
+        transform: rotateY(180deg) translateZ(50px);
+    }
+    .left{
+        background-color: rgba(98, 76, 161, 0.8);
+        transform: rotateY(90deg) translateZ(50px);
+    }
+    .right{
+         background-color: rgba(45, 161, 148, 0.8);
+        transform: rotateY(-90deg) translateZ(50px);
+    }
+    .box:hover .top{
+        transform: rotateX(90deg) translateZ(100px);
+
+    }
+    .box:hover .bottom{
+        transform: rotateX(-90deg) translateZ(100px);
+
+    }
+    .box:hover .fount{
+        transform:  translateZ(100px);
+
+    }
+    .box:hover .back{
+        transform: rotateY(180deg) translateZ(100px);
+
+    }
+    .box:hover .left{
+        transform: rotateY(90deg) translateZ(100px);
+
+    }
+    .box:hover .right{
+        transform: rotateY(-90deg) translateZ(100px);
+
+    }
+    @keyframes rotate {
+        0%{
+            transform: rotateX(20deg) rotateY(20deg);
+        }
+        100%{
+            transform: rotateX(380deg) rotateY(380deg);
+        }
+    }
+
+    .inbox{
+        position: relative;
+        top: 25px;
+        left: 25px;
+        width: 50px;
+        height: 50px;
+        transform-style: preserve-3d;
+
+    }
+    .inbox div{
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        text-align: center;
+        line-height: 50px;
+    }
+    .top2{
+        background-color: rgba(161,11,2,0.8);
+        transform: rotateX(90deg) translateZ(25px);
+    }
+    .bottom2{
+        background-color: rgba(48, 161, 38, 0.8);
+        transform: rotateX(-90deg) translateZ(25px);
+    }
+    .fount2{
+        background-color: rgba(80, 124, 161, 0.8);
+        transform: translateZ(25px);
+    }
+    .back2{
+        background-color: rgba(161, 112, 39, 0.8);
+        transform: rotateY(180deg) translateZ(25px);
+    }
+    .left2{
+        background-color: rgba(98, 76, 161, 0.8);
+        transform: rotateY(90deg) translateZ(25px);
+    }
+    .right2{
+        background-color: rgba(45, 161, 148, 0.8);
+        transform: rotateY(-90deg) translateZ(25px);
+    }
+
+</style>
+<body>
+<div class="box">
+
+    <div class="top"><img src="img2/cc.jpg" alt=""></div>
+    <div class="bottom"><img src="img2/cc.jpg" alt=""></div>
+    <div class="fount"><img src="img2/cc.jpg" alt=""></div>
+    <div class="back"><img src="img2/cc.jpg" alt=""></div>
+    <div class="left"><img src="img2/cc.jpg" alt=""></div>
+    <div class="right"><img src="img2/cc.jpg" alt=""></div>
+
+    <div class="inbox">
+        <div class="top2">上面</div>
+        <div class="bottom2">下面</div>
+        <div class="fount2">前面</div>
+        <div class="back2">后面</div>
+        <div class="left2">左面</div>
+        <div class="right2">右面</div>
+    </div>
+
+</div>
+</body>
+</html>
